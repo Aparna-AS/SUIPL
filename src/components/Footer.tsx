@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
