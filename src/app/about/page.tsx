@@ -3,24 +3,27 @@ import Link from 'next/link';
 export default function About() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+      {/* Hero Section — FULL SCREEN Parallax */}
       <section
-  className="text-white py-16 bg-cover bg-center"
-  style={{ backgroundImage: "url('https://www.biworldwide.com/ae/wp-content/uploads/sites/19/2025/03/BIW_Site_Hero_Learning-scaled-1.jpg')" }}
->
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6">
-        About SUIPL
-      </h1>
-      <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-        Certified startup with a data-driven agile workforce, providing the convenience 
-        of modulation and analytics with business to business approach.
-      </p>
-    </div>
-  </div>
-</section>
-
+        className="relative h-screen min-h-[560px] text-white bg-cover bg-center bg-no-repeat bg-fixed flex items-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1552664730-d307ca884978?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGVhbXdvcmt8ZW58MHx8MHx8fDA%3D')",
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About SUIPL</h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Certified startup with a data-driven agile workforce, providing the convenience
+              of modulation and analytics with business to business approach.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Company Overview */}
       <section className="py-20">
@@ -31,42 +34,42 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                STABDHA UTILITY INSIGHTS PRIVATE LIMITED (SUIPL) is a certified startup 
-                that specializes in providing comprehensive utility management and business 
-                intelligence solutions. Our data-driven approach ensures that businesses 
+                STABDHA UTILITY INSIGHTS PRIVATE LIMITED (SUIPL) is a certified startup
+                that specializes in providing comprehensive utility management and business
+                intelligence solutions. Our data-driven approach ensures that businesses
                 can make informed decisions while optimizing their operational efficiency.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                With our agile workforce and innovative methodologies, we deliver customized 
-                solutions that address the unique challenges faced by modern businesses in 
+                With our agile workforce and innovative methodologies, we deliver customized
+                solutions that address the unique challenges faced by modern businesses in
                 utility management, financial technology, and infrastructure support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/services" 
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                <Link
+                  href="/services"
+                  className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors text-center"
                 >
                   Our Services
                 </Link>
-                <Link 
-                  href="/contact" 
-                  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
+                <Link
+                  href="/contact"
+                  className="border-2 border-black text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 hover: border-gray-700 hover:text-white  transition-colors text-center"
                 >
                   Get in Touch
                 </Link>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl">
+
+            <div className="bg-gradient-to-br from-gray to-gray-300 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
               <p className="text-gray-700 mb-6">
-                To empower businesses with data-driven insights and comprehensive utility 
+                To empower businesses with data-driven insights and comprehensive utility
                 management solutions that drive efficiency, sustainability, and growth.
               </p>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Vision</h3>
               <p className="text-gray-700">
-                To be the leading provider of innovative utility management and business 
-                intelligence solutions, helping organizations achieve operational excellence 
+                To be the leading provider of innovative utility management and business
+                intelligence solutions, helping organizations achieve operational excellence
                 and environmental responsibility.
               </p>
             </div>
@@ -85,7 +88,7 @@ export default function About() {
               The principles that guide our work and define our commitment to excellence
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -95,11 +98,11 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Excellence</h3>
               <p className="text-gray-600">
-                We strive for excellence in every project, delivering high-quality solutions 
+                We strive for excellence in every project, delivering high-quality solutions
                 that exceed expectations.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,11 +111,11 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
               <p className="text-gray-600">
-                We embrace cutting-edge technologies and innovative approaches to solve 
+                We embrace cutting-edge technologies and innovative approaches to solve
                 complex business challenges.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,11 +124,11 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Collaboration</h3>
               <p className="text-gray-600">
-                We believe in the power of teamwork and maintain strong partnerships 
+                We believe in the power of teamwork and maintain strong partnerships
                 with our clients and stakeholders.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,7 +137,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Sustainability</h3>
               <p className="text-gray-600">
-                We are committed to environmental responsibility and helping businesses 
+                We are committed to environmental responsibility and helping businesses
                 reduce their carbon footprint.
               </p>
             </div>
@@ -153,129 +156,37 @@ export default function About() {
               Our unique approach and proven expertise set us apart in the industry
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
+            {[
+              { title: 'Certified Startup Status', text: 'Officially recognized startup with proven track record and innovative approach to business solutions.' },
+              { title: 'Data-Driven Methodology', text: 'Advanced analytics and insights to drive informed business decisions and optimize operations.' },
+              { title: 'Agile Workforce', text: 'Flexible and responsive team that adapts quickly to changing business needs and market conditions.' },
+              { title: 'B2B Focus', text: 'Specialized in business-to-business solutions with deep understanding of corporate needs and challenges.' },
+              { title: 'Comprehensive Solutions', text: 'End-to-end services covering utility management, financial IT, and infrastructure support.' },
+              { title: 'Sustainability Focus', text: 'Committed to helping businesses reduce their environmental impact and achieve sustainability goals.' },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.text}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Certified Startup Status</h3>
-                <p className="text-gray-600">
-                  Officially recognized startup with proven track record and innovative approach 
-                  to business solutions.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Data-Driven Methodology</h3>
-                <p className="text-gray-600">
-                  Advanced analytics and insights to drive informed business decisions 
-                  and optimize operations.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Agile Workforce</h3>
-                <p className="text-gray-600">
-                  Flexible and responsive team that adapts quickly to changing business 
-                  needs and market conditions.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">B2B Focus</h3>
-                <p className="text-gray-600">
-                  Specialized in business-to-business solutions with deep understanding 
-                  of corporate needs and challenges.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Comprehensive Solutions</h3>
-                <p className="text-gray-600">
-                  End-to-end services covering utility management, financial IT, 
-                  and infrastructure support.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Sustainability Focus</h3>
-                <p className="text-gray-600">
-                  Committed to helping businesses reduce their environmental impact 
-                  and achieve sustainability goals.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section 
-      className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16"
-        style={{ backgroundImage: "url('https://www.biworldwide.com/ae/wp-content/uploads/sites/19/2025/03/BIW_Site_Hero_Learning-scaled-1.jpg')" }}
->
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
-            Let us help you optimize your utility management and unlock the power of data-driven insights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-            >
-              Explore Our Services
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Contact Us Today
-            </Link>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }
